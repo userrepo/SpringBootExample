@@ -1,357 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	
-	<artifactId>spring-boot</artifactId>
-	<groupId>Spring-Boot</groupId>
-	<version>0.0.1-Snap</version>
-	<name>Spring Boot</name>
-	<description>Spring Boot</description>
-	<url>http://projects.spring.io/spring-boot/</url>
-	<organization>
-		<name>Pivotal Software, Inc.</name>
-		<url>http://www.spring.io</url>
-	</organization>
-	<properties>
-		<main.basedir>${basedir}/..</main.basedir>
-	</properties>
-	<dependencies>
-		<!-- Compile -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-		</dependency>
-		<!-- Optional -->
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions-jms</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions-jta</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions-jdbc</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.sendgrid</groupId>
-			<artifactId>sendgrid-java</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.googlecode.json-simple</groupId>
-			<artifactId>json-simple</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>javax.jms</groupId>
-			<artifactId>jms-api</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-core</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity-tools</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.assertj</groupId>
-			<artifactId>assertj-core</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.btm</groupId>
-			<artifactId>btm</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.groovy</groupId>
-			<artifactId>groovy</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.groovy</groupId>
-			<artifactId>groovy-xml</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-webapp</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-util</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-servlets</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>io.undertow</groupId>
-			<artifactId>undertow-servlet</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-library</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.liquibase</groupId>
-			<artifactId>liquibase-core</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.neo4j</groupId>
-			<artifactId>neo4j-ogm-core</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jul-to-slf4j</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.yaml</groupId>
-			<artifactId>snakeyaml</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.narayana.jta</groupId>
-			<artifactId>jta</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.narayana.jta</groupId>
-			<artifactId>jdbc</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.narayana.jta</groupId>
-			<artifactId>jms</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.narayana.jts</groupId>
-			<artifactId>narayana-jts-integration</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss</groupId>
-			<artifactId>jboss-transaction-spi</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<!-- Annotation processing -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<!-- Test -->
-		<dependency>
-			<groupId>com.google.appengine</groupId>
-			<artifactId>appengine-api-1.0-sdk</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.squareup.okhttp</groupId>
-			<artifactId>okhttp</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>okhttp</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>net.sourceforge.jtds</groupId>
-			<artifactId>jtds</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.derby</groupId>
-			<artifactId>derby</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpasyncclient</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.firebirdsql.jdbc</groupId>
-			<artifactId>jaybird-jdk18</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-all</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-redis</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.xerial</groupId>
-			<artifactId>sqlite-jdbc</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>test-jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>am.ik.archetype</groupId>
+    <artifactId>spring-boot-blank</artifactId>
+    <version>1.0.7-RELEASE</version>
+    <packaging>jar</packaging>
+
+    <name>Spring Boot Blank Project (from https://github.com/making/spring-boot-blank)</name>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.7.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <licenses><!-- DELETE THIS LINE -->
+        <license><!-- DELETE THIS LINE -->
+            <name>Apache License, Version 2.0</name><!-- DELETE THIS LINE -->
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url><!-- DELETE THIS LINE -->
+            <distribution>repo</distribution><!-- DELETE THIS LINE -->
+        </license><!-- DELETE THIS LINE -->
+    </licenses><!-- DELETE THIS LINE -->
+    <scm><!-- DELETE THIS LINE -->
+        <url>https://github.com/making/spring-boot-blank</url><!-- DELETE THIS LINE -->
+        <connection>scm:git:git@github.com:making/spring-boot-blank.git</connection><!-- DELETE THIS LINE -->
+        <developerConnection>scm:git:git@github.com:making/spring-boot-blank.git</developerConnection><!-- DELETE THIS LINE -->
+    </scm><!-- DELETE THIS LINE -->
+    <url>https://github.com/making/spring-boot-blank</url><!-- DELETE THIS LINE -->
+    <description>Blank Project for Spring Boot</description><!-- DELETE THIS LINE -->
+    <developers><!-- DELETE THIS LINE -->
+        <developer><!-- DELETE THIS LINE -->
+            <id>making</id><!-- DELETE THIS LINE -->
+            <name>Toshiaki Maki</name><!-- DELETE THIS LINE -->
+            <email>makingx@gmail.com</email><!-- DELETE THIS LINE -->
+            <url>https://twitter.com/making</url><!-- DELETE THIS LINE -->
+        </developer><!-- DELETE THIS LINE -->
+    </developers><!-- DELETE THIS LINE -->
+    <distributionManagement><!-- DELETE THIS LINE -->
+        <snapshotRepository><!-- DELETE THIS LINE -->
+            <id>ossrh</id><!-- DELETE THIS LINE -->
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url><!-- DELETE THIS LINE -->
+        </snapshotRepository><!-- DELETE THIS LINE -->
+        <repository><!-- DELETE THIS LINE -->
+            <id>ossrh</id><!-- DELETE THIS LINE -->
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url><!-- DELETE THIS LINE -->
+        </repository><!-- DELETE THIS LINE -->
+    </distributionManagement><!-- DELETE THIS LINE -->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>xxxxxx.yyyyyy.zzzzzz.App</start-class>
+        <java.version>1.8</java.version>
+        <lombok.version>1.14.8</lombok.version>
+        <log4jdbc.log4j2.version>1.16</log4jdbc.log4j2.version>
+        <rest.assured.version>2.3.3</rest.assured.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bgee.log4jdbc-log4j2</groupId>
+            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+            <version>${log4jdbc.log4j2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest.assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>${spring-loaded.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
