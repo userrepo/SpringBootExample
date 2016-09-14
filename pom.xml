@@ -10,34 +10,7 @@
 
     <name>Spring Boot Blank Project (from https://github.com/making/spring-boot-blank)</name>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.7.RELEASE</version>
-        <relativePath/>
-    </parent>
-    <licenses><!-- DELETE THIS LINE -->
-        <license><!-- DELETE THIS LINE -->
-            <name>Apache License, Version 2.0</name><!-- DELETE THIS LINE -->
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url><!-- DELETE THIS LINE -->
-            <distribution>repo</distribution><!-- DELETE THIS LINE -->
-        </license><!-- DELETE THIS LINE -->
-    </licenses><!-- DELETE THIS LINE -->
-    <scm><!-- DELETE THIS LINE -->
-        <url>https://github.com/making/spring-boot-blank</url><!-- DELETE THIS LINE -->
-        <connection>scm:git:git@github.com:making/spring-boot-blank.git</connection><!-- DELETE THIS LINE -->
-        <developerConnection>scm:git:git@github.com:making/spring-boot-blank.git</developerConnection><!-- DELETE THIS LINE -->
-    </scm><!-- DELETE THIS LINE -->
-    <url>https://github.com/making/spring-boot-blank</url><!-- DELETE THIS LINE -->
-    <description>Blank Project for Spring Boot</description><!-- DELETE THIS LINE -->
-    <developers><!-- DELETE THIS LINE -->
-        <developer><!-- DELETE THIS LINE -->
-            <id>making</id><!-- DELETE THIS LINE -->
-            <name>Toshiaki Maki</name><!-- DELETE THIS LINE -->
-            <email>makingx@gmail.com</email><!-- DELETE THIS LINE -->
-            <url>https://twitter.com/making</url><!-- DELETE THIS LINE -->
-        </developer><!-- DELETE THIS LINE -->
-    </developers><!-- DELETE THIS LINE -->
+
     <distributionManagement><!-- DELETE THIS LINE -->
         <snapshotRepository><!-- DELETE THIS LINE -->
             <id>ossrh</id><!-- DELETE THIS LINE -->
@@ -97,6 +70,36 @@
     </dependencies>
     <build>
         <plugins>
+                 
+                 <plugin>
+<groupId>org.codehaus.mojo</groupId>
+<artifactId>cobertura-maven-plugin</artifactId>
+<version>2.7</version>
+<configuration>
+<formats>
+<format>xml</format>
+</formats>
+</configuration>
+<executions>
+<execution>
+<phase>package</phase>
+<goals>
+<goal>cobertura</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
+
+<plugin>
+                                                                <groupId>org.apache.maven.plugins</groupId>
+                                                                <artifactId>maven-compiler-plugin</artifactId>
+                                                                <version>3.3</version>
+                                                                <configuration>
+                                                                                <source>1.8</source>
+                                                                                <target>1.8</target>
+                                                                </configuration>
+                                                </plugin>
+                 
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
